@@ -4,6 +4,7 @@ const customer = () => {
         <>
         <Navbar isSeller={false}></Navbar>
         <h1>customer</h1>
+        <h1>Hello</h1>
         </>
     );
 }
