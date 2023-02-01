@@ -1,10 +1,6 @@
 export default function Login() {
     return (
       <div className="container">
-        {/* <div id="tabs">
-              <button className = "tab-links active" id="login-btn">Login</button>
-              <button className = "tab-links" id="signup-btn">Sign Up</button>
-        </div>  */}
         <div className="main-content"></div>
           <form className="loginForm">
             <div className="loginContent">
@@ -33,7 +29,7 @@ export default function Login() {
                 placeholder="Enter Password"
                 />
             </div>
-            <div className="LogInBtn">
+            <div className="LogInButton">
               <button type="submit" className="LoginBtn">Login</button>
             </div>
           </div>
