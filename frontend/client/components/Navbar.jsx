@@ -1,7 +1,7 @@
 "use client"
 import "../app/nav.css"
 const Navbar = ({isSeller}) => {
-    console.log(typeof isSeller)
+    
     return (
 
             <div >
@@ -21,9 +21,9 @@ const Navbar = ({isSeller}) => {
                             <h1>Ticketeer</h1>
                         </div>
                         <div id="navlinks">
-                            <a>My Cart</a>
-                            <a>Purchases</a>
-                            <a>Events</a>
+                            <p>My Cart</p>
+                            <p>Purchases</p>
+                            <p>Events</p>
                         </div>
                     </nav>
                 
