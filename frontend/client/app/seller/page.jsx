@@ -1,10 +1,11 @@
 import Navbar from "@/components/Navbar";
+import Sellerform from "@/components/Sellerform";
 
 const seller = () => {
     return (
         <div>
             <Navbar isSeller={true}></Navbar>
-            <h1>seller</h1>
+            <Sellerform></Sellerform>
 
         </div>
     );
