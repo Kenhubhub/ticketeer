@@ -1,6 +1,12 @@
+import Navbar from "@/components/Navbar";
+
 const seller = () => {
     return (
-        <h1>seller</h1>
+        <div>
+            <Navbar isSeller={true}></Navbar>
+            <h1>seller</h1>
+
+        </div>
     );
 }
  

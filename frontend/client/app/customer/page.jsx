@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar";
 const customer = () => {
     return ( 
         <>
-        <Navbar isSeller={false}></Navbar>
+        <Navbar isSeller={false}/>
         <h1>customer</h1>
         </>
     );

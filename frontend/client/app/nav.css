@@ -1,0 +1,23 @@
+#nav{
+    display: flex;
+    align-items: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 0px 8px 0 rgba(0,0,0,0.2);
+    justify-content: space-between;
+    background-color: rgba(252, 252, 252, 0.966);
+    color: black;
+    padding: 10px 20px;
+    /* position: fixed; */
+    width: 100%;
+    height: 15%;
+}
+
+  
+#nav img{
+    max-height: 30px;
+}
+#logo{
+    display: flex;
+    align-items: center;
+    
+}
