@@ -11,6 +11,7 @@ export default function Login() {
                 type="userName"
                 className="usernameInput"
                 placeholder="Enter Username"
+                name="username"
                 />
             </div>
             <div className="form">
@@ -19,6 +20,7 @@ export default function Login() {
                 type="email"
                 className="emailInput"
                 placeholder="Enter Email"
+                name="email"
                 />
             </div>
             <div className="form">
@@ -27,6 +29,7 @@ export default function Login() {
                 type="password"
                 className="passwordInput"
                 placeholder="Enter Password"
+                name="password"
                 />
             </div>
             <div className="LogInButton">
