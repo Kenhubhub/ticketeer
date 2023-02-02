@@ -9,7 +9,6 @@
   .loginForm {
     width: 420px;
     border: 1px solid black;
-    padding-top: 30px;
     padding-bottom: 20px;
   }
   
@@ -34,4 +33,8 @@
     font-size: 14px;
     font-weight: 600;
     color: rgb(34, 34, 34);
+  }
+
+  .loginAnimation{
+    animation: login 700ms ease-in-out;
   }

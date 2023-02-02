@@ -1,7 +1,48 @@
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 15%;
-    height: 30%;
-  }
+.tileContainer {
+  display: flex;
+  height: 40%;
+  width: 420px;
+  margin-left: 27%; 
+  margin-top: 15%;
+  justify-content: center;
+}
+
+.tabs button{
+    background-color: #009cde;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 16px 16px 14px;
+}
+
+.tabs button:hover{
+    background-color: #88cbe7;
+}
+
+input[type="submit"]{
+  width: 20%;
+  padding: 1%;
+  border: 1px solid #000
+}
+
+input[type="submit"]:hover{
+  cursor: pointer;
+  background-color: lightslategray;
+}
+@keyframes login {
+  0% {opacity: 1;}
+  50%{opacity: 0; transform: translateX(-300px);}
+  51%{transform: translateX(300px);}
+  100%{opacity: 1; transform: translateX(0px);}
+}
+
+@keyframes signup {
+  0% {opacity: 1;}
+  50%{opacity: 0; transform: translateX(300px);}
+  51%{transform: translateX(-300px);}
+  100%{opacity: 1; transform: translateX(0px);}
+}
+
+
+
+  

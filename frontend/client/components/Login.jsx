@@ -1,7 +1,10 @@
+import Navbar from "./Navbar";
 export default function Login() {
     return (
+    <div>
+        <Navbar isSeller={true}></Navbar>
       <div className="container">
-          <form action="http://localhost:<insert port of backend here>/" method="POST"className="loginForm">
+          <form action="http://localhost:4000/login" method="POST"className="loginForm">
             <div className="loginContent">
               <h3 className="loginTitle">Login</h3>
             <div className="form">
@@ -37,7 +40,7 @@ export default function Login() {
           </div>
         </form>
       </div>
-      
+    </div>      
     )
   }
   

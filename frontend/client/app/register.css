@@ -1,16 +1,17 @@
   .container {
     display: flex;
+    height: 40%;
+    width: 30%;
     justify-content: center;
-    align-items: center;
-    margin-top: 15%;
-    height: 30%;
+    margin-top: 0;
+    margin-left: 30%
   }
+
   
   .RegisterForm {
     width: 420px;
     border: 1px solid black;
-    padding-top: 30px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
   }
   
   .RegisterContent {
@@ -20,18 +21,17 @@
   
   .RegisterTitle {
     text-align: center;
-    margin-bottom: 1em;
     font-size: 24px;
     color: rgb(34, 34, 34);
     font-weight: 800;
-  }
-
-  .form {
-    padding: 10px;
   }
   
   label {
     font-size: 14px;
     font-weight: 600;
     color: rgb(34, 34, 34);
+  }
+  
+  .registerAnimation{
+    animation: signup 700ms ease-in-out;
   }
