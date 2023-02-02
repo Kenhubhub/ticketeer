@@ -1,9 +1,11 @@
+
+
 .tileContainer {
   display: flex;
   height: 40%;
   width: 420px;
   margin-left: 27%; 
-  margin-top: 15%;
+  margin-top: 10%;
   justify-content: center;
 }
 

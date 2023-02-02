@@ -1,8 +1,5 @@
-import Navbar from "./Navbar";
 export default function Login() {
     return (
-    <div>
-        <Navbar isSeller={true}></Navbar>
       <div className="container">
           <form action="http://localhost:4000/login" method="POST"className="loginForm">
             <div className="loginContent">
@@ -39,8 +36,7 @@ export default function Login() {
             </div>
           </div>
         </form>
-      </div>
-    </div>      
+      </div>     
     )
   }
   
