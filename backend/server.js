@@ -10,9 +10,20 @@ connectDb(process.env.MONGO_URI);
 const UserDB = require ('./schemas/userSchema');
 
 // login route
-app.post("/login",(req,res)=>{
-    res.json("success");
-})
+app.post("/login", async (req,res)=>{
+    const {username, email, password} = req.body;
+
+    let document = await UserDB.findOne({email});
+
+    if (!document) {
+        res.json({status: false, message: 'Account does not exist'});
+    }
+
+    if (password == document.password && username == document.username) {
+        res.json({status: true, message: 'Success'})
+    }
+
+});
 
 // register route
 app.post("/register",async (req,res)=>{
