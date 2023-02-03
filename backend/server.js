@@ -5,7 +5,8 @@ require("dotenv").config()
 const port = process.env.PORT;
 app.use(express.urlencoded({extended:true}))
 app.use(express.json())
-
+const {connectDb} = require("./db/db")
+connectDb(process.env.MONGO_URI);
 // login route
 app.post("/login",(req,res)=>{
     res.json("success");
@@ -13,8 +14,8 @@ app.post("/login",(req,res)=>{
 
 // register route
 app.post("/register",(req,res)=>{
-    res.json("success");
-
+    const {username,password,email} = req.body;
+    res.json({username,password,email})
 })
 app.listen(port, ()=>{
     console.log(`listening on ${port}`)
