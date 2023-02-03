@@ -30,7 +30,7 @@ const Register = () => {
                 />
             </div>
             <div className="sellerAccount">
-             <input type="checkbox" id="checkbox" name="checkbox" value="seller Account" />Seller Account
+             <input type="checkbox" id="checkbox" name="seller" value="seller Account" />Seller Account
             </div>
             <div className="RegisterButton">
               <button type="submit" className="RegisterBtn">Register</button>

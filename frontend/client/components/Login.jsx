@@ -1,7 +1,28 @@
+"use client"
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+
+
+
 export default function Login() {
+  const router  = useRouter()
+  const Authenticate = async (e)=>{
+    e.preventDefault()
+    console.log(e.target.username.value);
+    const user = {
+      username: e.target.username.value,
+      password: e.target.password.value,
+      email: e.target.email.value
+    }
+    const res = await fetch('http://localhost:4000/login', {method: 'POST',headers: {'Content-Type': 'application/json'},body:JSON.stringify(user)})
+    const data = await res.json();
+    if(data.status === true){
+      router.push("/customer")
+    }
+  }
     return (
       <div className="container">
-          <form action="http://localhost:4000/login" method="POST"className="loginForm">
+          <form onSubmit={e=>Authenticate(e)} className="loginForm">
             <div className="loginContent">
               <h3 className="loginTitle">Login</h3>
             <div className="form">
