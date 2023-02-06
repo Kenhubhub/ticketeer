@@ -22,7 +22,7 @@ app.post("/login", async (req,res)=>{
     }
 
     if (password == document.password && username == document.username) {
-        res.json({status: true, message: 'Success'})
+        res.json({status: true, message: document})
     }
 
 });
