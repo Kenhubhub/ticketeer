@@ -13,7 +13,7 @@ const userSchema = mongoose.Schema({
         require: true
     },
     isSeller:{
-        type:String,
+        type:Boolean,
         require: true,
     }
     
