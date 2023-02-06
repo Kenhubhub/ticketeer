@@ -12,13 +12,16 @@ const Register = () => {
    console.log(e.target.username.value);
    const user = {
     username: e.target.username.value,
-    password: e.target.password,
+    password: e.target.password.value,
     email: e.target.email.value,
     isSeller: e.target.isSeller.checked
    }
    // 2. 
-   const res = await fetch('http://localhost:4000/Register', {method: 'POST',headers: {'Content-Type': 'application/json'},body:JSON.stringify(user)})
-   console.log(res)
+   console.log(typeof e.target.password)
+   const res = await fetch('http://localhost:4000/register', {method: 'POST',headers: {'Content-Type': 'application/json'},body:JSON.stringify(user)})
+   if(res.status === 200){
+      user.isSeller == true ? router.push("/seller") : router.push("/customer")
+   }
   }
 
     return (  
