@@ -17,7 +17,12 @@ export default function Login() {
     const res = await fetch('http://localhost:4000/login', {method: 'POST',headers: {'Content-Type': 'application/json'},body:JSON.stringify(user)})
     const data = await res.json();
     if(data.status === true){
-      router.push("/customer")
+      if(data.message.isSeller === true){
+        router.push("/seller")
+      }
+      else{
+        router.push("/customer")
+      }
     }
   }
     return (
@@ -57,7 +62,15 @@ export default function Login() {
             </div>
           </div>
         </form>
-      </div>     
+      </div>
+      
+      
+
+
+
+
+
+
     )
   }
   

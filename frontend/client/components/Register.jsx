@@ -1,8 +1,30 @@
+"use client"
+
+import Link from "next/link";
+import {useRouter} from "next/navigation";
+
+
 const Register = () => {
+  const router = useRouter()
+  // 1. Obtain user details from register form
+  const Authenticate = async (e)=>{
+   e.preventDefault()
+   console.log(e.target.username.value);
+   const user = {
+    username: e.target.username.value,
+    password: e.target.password,
+    email: e.target.email.value,
+    isSeller: e.target.isSeller.checked
+   }
+   // 2. 
+   const res = await fetch('http://localhost:4000/Register', {method: 'POST',headers: {'Content-Type': 'application/json'},body:JSON.stringify(user)})
+   console.log(res)
+  }
+
     return (  
         <div className="container">
         <div className="main-content"></div>
-          <form className="RegisterForm">
+          <form onSubmit={e=> Authenticate(e)} className="RegisterForm">
             <div className="RegisterContent">
               <h3 className="RegisterTitle">Register</h3>
             <div className="form">
@@ -11,6 +33,7 @@ const Register = () => {
                 type="userName"
                 className="usernameInput"
                 placeholder="Enter Username"
+                name="username"
                 />
             </div>
             <div className="form">
@@ -19,6 +42,7 @@ const Register = () => {
                 type="email"
                 className="emailInput"
                 placeholder="Enter Email"
+                name="email"
                 />
             </div>
             <div className="form">
@@ -27,10 +51,12 @@ const Register = () => {
                 type="password"
                 className="passwordInput"
                 placeholder="Enter Password"
+                name="password"
                 />
             </div>
             <div className="sellerAccount">
-             <input type="checkbox" id="checkbox" name="seller" value="seller Account" />Seller Account
+             <input type="checkbox" id="checkbox" name="isSeller"  />
+             <label htmlFor="">Seller</label>
             </div>
             <div className="RegisterButton">
               <button type="submit" className="RegisterBtn">Register</button>
