@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const {eventSchema} = require("./eventSchema")
 const userSchema = mongoose.Schema({
     username: {
         type: String,
@@ -15,7 +16,10 @@ const userSchema = mongoose.Schema({
     isSeller:{
         type:Boolean,
         require: true,
-    }
+    },
+    events: [{
+        eventSchema
+    }] 
     
 },{
     timestamps: true
