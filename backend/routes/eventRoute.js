@@ -2,7 +2,7 @@ const router = require("express").Router();
 const {eventModel} = require ('../schemas/eventSchema');
 //Create 
 router.post("/create", async (req,res)=>{
-    const {name,ta,price,location,description,date,genre,sellerid} = req.body
+    const {name,ta,price,location,description,date,genre,sellerDetails} = req.body
     const event = await eventModel.create({
         name,
         ta,
@@ -11,7 +11,7 @@ router.post("/create", async (req,res)=>{
         description,
         date,
         genre,
-        sellerid
+        sellerDetails
     })
     res.json({created: true, event})
 })

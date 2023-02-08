@@ -14,14 +14,14 @@ export default function Login() {
       password: e.target.password.value,
       email: e.target.email.value
     }
-    const res = await fetch('http://localhost:4000/login', {method: 'POST',headers: {'Content-Type': 'application/json'},body:JSON.stringify(user)})
+    const res = await fetch('http://localhost:4000/user/login', {method: 'POST',headers: {'Content-Type': 'application/json'},body:JSON.stringify(user)})
     const data = await res.json();
     if(data.status === true){
       if(data.message.isSeller === true){
-        router.push("/seller")
+        router.push(`/seller/${data.message._id}`)
       }
       else{
-        router.push("/customer")
+        router.push(`/customer/${data.message._id}`)
       }
     }
   }
