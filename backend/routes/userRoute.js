@@ -45,8 +45,16 @@ router.post("/eventtouser",async (req,res)=>{
 // post to get user purchased events
 router.post("/getPurchases" , async (req,res)=>{
     console.log(req.body)
-    const user = await UserDB.findById(req.body.id);
-    console.log(user)
-    res.json(user.events)
+    if(req.body.id === "undefined"){
+        res.json([])
+    }else{
+
+
+        const user = await UserDB.findById(req.body.id);
+        if(user){
+            res.json(user.events)
+        }
+        
+    }
 })
 module.exports = router

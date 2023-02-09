@@ -4,7 +4,7 @@ const Events = ({events,id}) => {
     return (  
         <>
             {
-                events.map( event => <Event id={id} event={event}/>)
+                events.map( (event,i) => <Event key={i} id={id} event={event}/>)
             }
         </>
     );

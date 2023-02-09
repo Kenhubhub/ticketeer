@@ -3,7 +3,7 @@ const getEvents = async ()=>{
       next:{revalidate:1}
     })
     const data = await res.json();
-    console.log(data)
+   
     return data;
 }
 

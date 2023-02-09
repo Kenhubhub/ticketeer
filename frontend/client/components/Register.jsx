@@ -9,7 +9,7 @@ const Register = () => {
   // 1. Obtain user details from register form
   const Authenticate = async (e)=>{
    e.preventDefault()
-   console.log(e.target.username.value);
+  
    const user = {
     username: e.target.username.value,
     password: e.target.password.value,
@@ -17,10 +17,12 @@ const Register = () => {
     isSeller: e.target.isSeller.checked
    }
    // 2. 
-   console.log(typeof e.target.password)
+   
    const res = await fetch('http://localhost:4000/user/register', {method: 'POST',headers: {'Content-Type': 'application/json'},body:JSON.stringify(user)})
+   const data = await res.json()
+   console.log(data)
    if(res.status === 200){
-      user.isSeller == true ? router.push(`/seller/${user._id}`) : router.push(`/customer/${user._id}`)
+      user.isSeller == true ? router.push(`/seller/${data.message._id}`) : router.push(`/customer/${data.message._id}`)
    }
   }
 
