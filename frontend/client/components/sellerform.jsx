@@ -27,8 +27,8 @@ export default function Sellerform({id,setEventPage}) {
     }
     return (
         <div onSubmit={ e=>createEvent(e)}id="sellercontainer">
-                <h2>Upload Event</h2>
                 <form id="sellerform">
+                    <h2>Upload Event</h2>
                     <label>Artist Name:</label>
                     <input type="text"  name="name"></input>
 
@@ -46,8 +46,9 @@ export default function Sellerform({id,setEventPage}) {
 
                     <label>Max tickets per user:</label>
                     <input type="number"  name="maxper"></input>
+                    <label htmlFor="">Description:</label>
                     <textarea name="description" id="" cols="30" rows="10"></textarea>
-                    <input type="submit" value="Submit"></input>
+                    <input className="Button" type="submit" value="Submit"></input>
                 </form>
             </div>
             )

@@ -25,12 +25,17 @@ const SearchForm = ({events,setFiltered,id}) => {
         }
     }
     return ( 
-        <form onSubmit={e=>setEvents(e)} action="">
-            <label htmlFor="">Genre:</label>
+        <form className="SearchBar" onSubmit={e=>setEvents(e)} action="">
+            <div>
+            <label htmlFor="">Genre: </label>
             <input type="text" name="genre" id="" />
-            <label htmlFor="">Location:</label>
+
+            </div>
+            <div>
+            <label htmlFor="">Location: </label>
             <input type="text" name="location" />
-            <button type="submit">Submit</button>
+            </div>
+            <button className="Button" type="submit">Submit</button>
         </form>
      );
 }

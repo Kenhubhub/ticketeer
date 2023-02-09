@@ -10,15 +10,15 @@ export default function Card({ eventInfo, cardId,userid}) {
       
     }
     return (
-      <div>
-        <ul>
-          <li>Name: {eventInfo.name}</li>
-          <li>Price: {eventInfo.price}</li>
-          <li>tickets available: {eventInfo.ta}</li>
-          <li>Location: {eventInfo.location}</li>
-          <li>Max tickets per use: {eventInfo.maxper ? eventInfo.maxper : eventInfo.ta}</li>
-        </ul>
-        <button onClick={()=>{deleteEvent(cardId)}} type="submit">Delete</button>
+      <div className="Card">
+        
+          <p>Name: {eventInfo.name}</p>
+          <p>Price: {eventInfo.price}</p>
+          <p>tickets available: {eventInfo.ta}</p>
+          <p>Location: {eventInfo.location}</p>
+          <p>Max tickets per use: {eventInfo.maxper ? eventInfo.maxper : eventInfo.ta}</p>
+        
+        <button className="Button" onClick={()=>{deleteEvent(cardId)}} type="submit">Delete</button>
       </div>
     );
   }

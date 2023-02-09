@@ -42,17 +42,17 @@ const Event = ({event,id}) => {
     return (
         <>
             {
-                <div>
-                    <ul>
-                        <li>Name of Event: {event.name}</li>
-                        <li>Location: {event.location}</li>
-                        <li>Price: £{event.price}</li>
-                        <li>Genre: {event.genre}</li>
-                        <li>Tickets Available: {event.ta}</li>
-                        <li>Tickets per use: {event.maxper}</li>
-                    </ul>
+                <div className="Card">
+                    
+                        <p>Name of Event: {event.name}</p>
+                        <p>Location: {event.location}</p>
+                        <p>Price: £{event.price}</p>
+                        <p>Genre: {event.genre}</p>
+                        <p>Tickets Available: {event.ta}</p>
+                        <p>Tickets per use: {event.maxper}</p>
+                    
                     {
-                        event.ta == 0 ? <p>Sold out</p> : <button onClick = {(e)=>BuyEvent(e,id,event,event.maxper)}type="submit">Buy</button> 
+                        event.ta == 0 ? <p>Sold out</p> : <button className="Button" onClick = {(e)=>BuyEvent(e,id,event,event.maxper)}type="submit">Buy</button> 
                     }
                     
                 </div>

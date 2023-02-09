@@ -57,8 +57,8 @@ export default function Login() {
                 name="password"
                 />
             </div>
-            <div className="LogInButton">
-              <button type="submit" className="LoginBtn">Login</button>
+            <div>
+              <button type="submit" className="Button">Login</button>
             </div>
           </div>
         </form>

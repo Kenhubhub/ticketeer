@@ -1,5 +1,6 @@
 import SellerPage from "@/components/SellerPage";
 import getEvents from "@/utils/getEvents"
+
 const seller = async ({params}) => {
    
     let events = await getEvents()

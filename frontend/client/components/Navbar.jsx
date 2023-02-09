@@ -13,8 +13,8 @@ const Navbar = ({isSeller,setEventPage,setCustomerPage}) => {
                             <h1>Ticketeer</h1>
                         </div>
                         <div id="navlinks">
-                            <p onClick={() => setEventPage(true)}>My Events</p>
-                            <p onClick={() => setEventPage(false)}>Submit Event</p>
+                            <p className="link" onClick={() => setEventPage(true)}>My Events</p>
+                            <p className="link" onClick={() => setEventPage(false)}>Submit Event</p>
                         </div>
                     </nav>
                 :
@@ -25,8 +25,8 @@ const Navbar = ({isSeller,setEventPage,setCustomerPage}) => {
                             <h1>Ticketeer</h1>
                         </div>
                         <div id="navlinks">
-                            <p onClick={() => setCustomerPage(false)}>Purchases</p>
-                            <p onClick={() => setCustomerPage(true)} >Events</p>
+                            <p className="link" onClick={() => setCustomerPage(false)}>Purchases</p>
+                            <p className="link" onClick={() => setCustomerPage(true)} >Events</p>
                         </div>
                     </nav>
                 

@@ -5,12 +5,12 @@ const Purchases = ({events}) => {
         <>
             {   
                 events.map(event => (
-                    <div>
-                        <ul>
-                            <li>Name of Event: {event.name}</li>
-                            <li>Price Paid: {event.price}</li>
-                            <li>Date of Purchase: {event.date}</li>
-                        </ul>
+                    <div className="CardContainer">
+                        <div className="Card">
+                            <p>Name of Event: {event.name}</p>
+                            <p>Price Paid: {event.price}</p>
+                            <p>Date of Purchase: {event.date}</p>
+                        </div>
                     </div>
                 ))
             }

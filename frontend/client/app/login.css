@@ -2,13 +2,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 30%;
+    height: 100%;
+    width: 100%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
   }
   
   .loginForm {
     width: 420px;
-    border: 1px solid black;
+    border: 1px;
     padding-bottom: 20px;
+    box-shadow: 0 0px 8px 0 rgba(0,0,0,0.2);
+
   }
   
   .loginContent {

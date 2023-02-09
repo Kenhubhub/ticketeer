@@ -2,15 +2,15 @@
 
 .tileContainer {
   display: flex;
-  height: 40%;
-  width: 420px;
-  margin-left: 27%; 
-  margin-top: 10%;
+  height: 100%;
+  width: 100%;
+  margin-top: 10em;
   justify-content: center;
 }
 
 .tabs button{
-    background-color: #009cde;
+    background-color: #0278ff;
+    color: white;
     border: none;
     outline: none;
     cursor: pointer;
@@ -18,7 +18,8 @@
 }
 
 .tabs button:hover{
-    background-color: #88cbe7;
+    background-color: #f8f8f8bb;
+    color: black;
 }
 
 input[type="submit"]{

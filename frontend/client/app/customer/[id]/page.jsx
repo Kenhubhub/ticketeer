@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import CustomerPage from "@/components/CustomerPage";
 import getEvents from "@/utils/getEvents"
+
 const getCustomerPurchases = async (id)=>{
     
     const res = await fetch('http://localhost:4000/user/getPurchases', {method: 'POST',headers: {'Content-Type': 'application/json'},body:JSON.stringify({id})})

@@ -10,7 +10,7 @@ function SellerCard({userid,events}){
     
     console.log(events)
     return (  
-        <div>
+        <div className="CardContainer">
             {
                 events ?
                 events.map( (event) => <Card key={event._id} userid = {userid} cardId = {event._id}eventInfo={event}/>) :

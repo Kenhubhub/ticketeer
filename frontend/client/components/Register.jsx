@@ -63,8 +63,8 @@ const Register = () => {
              <input type="checkbox" id="checkbox" name="isSeller"  />
              <label htmlFor="">Seller</label>
             </div>
-            <div className="RegisterButton">
-              <button type="submit" className="RegisterBtn">Register</button>
+            <div >
+              <button type="submit" className="Button">Register</button>
             </div>
             </div>
         </form>
