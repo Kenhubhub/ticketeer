@@ -9,7 +9,7 @@ router.post("/login", async (req,res)=>{
     if (!document) {
         res.json({status: false, message: 'Account does not exist'});
     }
-
+    console.log(document)
     if (password == document.password && username == document.username) {
         res.json({status: true, message: document})
     }
@@ -34,5 +34,19 @@ router.post("/register",async (req,res)=>{
     });
 
     res.json({status:true, message:user});  
+})
+// Update add event to user
+router.post("/eventtouser",async (req,res)=>{
+    const {name,location,price,date,id} = req.body;
+    const returnValue = await UserDB.findByIdAndUpdate(id,{$push: {events:{name,location,price,date}}})
+    console.log(returnValue)
+    res.json(returnValue)
+})
+// post to get user purchased events
+router.post("/getPurchases" , async (req,res)=>{
+    console.log(req.body)
+    const user = await UserDB.findById(req.body.id);
+    console.log(user)
+    res.json(user.events)
 })
 module.exports = router

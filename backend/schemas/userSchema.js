@@ -18,7 +18,10 @@ const userSchema = mongoose.Schema({
         require: true,
     },
     events: [{
-        eventSchema
+        name: String,
+        location: String,
+        price: Number,
+        date: String
     }] 
     
 },{

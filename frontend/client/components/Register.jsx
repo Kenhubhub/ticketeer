@@ -20,7 +20,7 @@ const Register = () => {
    console.log(typeof e.target.password)
    const res = await fetch('http://localhost:4000/user/register', {method: 'POST',headers: {'Content-Type': 'application/json'},body:JSON.stringify(user)})
    if(res.status === 200){
-      user.isSeller == true ? router.push("/seller") : router.push("/customer")
+      user.isSeller == true ? router.push(`/seller/${user._id}`) : router.push(`/customer/${user._id}`)
    }
   }
 

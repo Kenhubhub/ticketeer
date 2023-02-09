@@ -1,6 +1,6 @@
 "use client"
 import "../app/nav.css"
-const Navbar = ({isSeller,setEventPage}) => {
+const Navbar = ({isSeller,setEventPage,setCustomerPage}) => {
     
     return (
 
@@ -25,9 +25,8 @@ const Navbar = ({isSeller,setEventPage}) => {
                             <h1>Ticketeer</h1>
                         </div>
                         <div id="navlinks">
-                            <p>My Cart</p>
-                            <p>Purchases</p>
-                            <p>Events</p>
+                            <p onClick={() => setCustomerPage(false)}>Purchases</p>
+                            <p onClick={() => setCustomerPage(true)} >Events</p>
                         </div>
                     </nav>
                 
